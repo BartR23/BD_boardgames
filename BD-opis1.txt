@@ -1,0 +1,42 @@
+1. Określenie tematyki i zakresu projektu
+Tematem projektu jest stworzenie bazy danych do katalogowania gier planszowych – przechowywania informacji o mechanice, tematyce gry, grupie odbiorców, datach kolejnych wydań, opublikowanych recenzjach danej gry.
+W celu jego realizacji zebrane i przeanalizowane zostaną zagadnienia związane z tematyką gier planszowych, przygotowany zostanie diagram związków encji (ERD) projektowanej bazy danych, na jego podstawie, w wybranym środowisku, zostaną utworzone tabele przechowujące niezbędne informacje, które następnie wypełnione będą przykładowymi danymi.
+2. Przedstawienie zagadnień związanych z tematem
+Gry planszowe są rodzajem gier towarzyskich, do których używane są specjalne plansze. Tradycyjne plansze posiadają pola, na których rozgrywane są partie poprzez stawianie i przesuwanie pionów w ustalonej wcześniej kolejności, ustalona z góry dla danej rozgrywki jest również liczba graczy. W tradycyjnych grach istnieją zasady przesuwania pionów, plansza może składać się wyłącznie z pól lub też pola mogą stanowić tylko część planszy. Wiele spośród gier posiada kilka różnych odmian o nieco innych zasadach rozgrywki. Współczesne gry planszowe często są osadzone fabularnie w konkretnym czasie i przestrzeni, plansze takich gier są obszarem nawiązującym graficznie do tytułu/tematyki, których dotyczy gra, na obszarze tym kładzione są specjalne karty, żetony, stawiane budowle itp. Odmienną kategorię stanowią gry planszowe dla dzieci, które oprócz rozrywki niosą ze sobą walory edukacyjne – dzieci uczą się planowania, przewidywania oraz samodzielnego rozwiązywania problemów.
+Niektóre gry zależą całkowicie od umiejętności graczy, inne nie wymagają żadnych umiejętności i rozstrzygane są wyłącznie przez szczęście/element losowy. Wiele gier natomiast wymaga zarówno pewnego poziomu umiejętności, jak i szczęścia. Elementy szczęścia mogą czasami powodować więcej emocji i pozwalają na bardziej zróżnicowane i wieloaspektowe strategie.
+Nowoczesne gry planszowe mogą być klasyfikowane na różne sposoby, a różnorodność gier sprawia, że niektóre z nich mogą należeć do kilku kategorii w ramach jednej grupy podziału. Zasadniczo stosuje się następujące grupy służące  klasyfikacji:
+mechanika/mechanics – szereg złożonych reguł i strategii mających wpływ na ocenę gracza lub jego osiągnięć, odbywa się to poprzez np. przejmowanie elementów należących do przeciwnika, zliczanie końcowego wyniku lub osiągnięcie określonego rezultatu (przykładowe kategorie: Auction, Area control, Campaign, City building, Cooperative, Cross and circle, Economic, Educational, Guessing, Hidden role, Memory, Paper-and-pencil, Party, Physical skills, Puzzle, Race, Word, Wargame);
+motyw przewodni/theme – gry mogą mieć określoną narrację gatunku, temat, który naśladuje pewne koncepcje w rzeczywistych sytuacjach lub scenariuszu fikcyjnym (przykładowe kategorie: Adventure, Civil War, Fantasy, Farming, Industry/Manufacturing, Historical simulation, Mafia, Murder mystery, Mythology, Nautical, Political, Science fiction, Sports, Train, Travel);
+komponenty/components – gry mogą być podzielone na kategorie wg ich komponentów składowych (przykładowe kategorie: Diece, Book, Card, Electronic, Game system, Miniatures, Tile-based);
+kategoria wiekowa/age range – zalecany zakres wiekowy docelowej grupy graczy (przykładowe kategorie: Adult, Children's, Family);
+liczba graczy/player number – liczba graczy, dla których przeznaczona jest dana gra planszowa (przykładowe kategorie: One-player, Two-player, Multiplayer, Large multiplayer);
+rodzaj promocji/promotion type – ścieżki, które twórcy gier przyjmują, aby promować grę (przykładowe kategorie: Collectable, Expansion, Print-and-play, Travel).
+Dana gra może mieć kilka wersji/kolejnych wydań. Każda z gier może mieć określoną jedną lub kilka mechanik rozgrywki, a każda mechanika może opisywać wiele różnych gier. Podobnie każda gra może zawierać wiele komponentów lub żadnego, a każdy z komponentów może dotyczyć wielu gier. Każda gra ma przypisaną konkretną kategorię wiekową, kategorię liczby graczy oraz może mieć przypisany dominujący rodzaj promocji, oczywiście każdej z kategorii liczby graczy, kategorii wiekowej oraz rodzaju promocji może być przypisane wiele gier. 
+Ponadto każda z gier (każda z wersji/wydania gry) ma określony numer wersji/kolejnego wydania, datę wydania,  może mieć przypisanego konkretnego wydawcę oraz recenzje (wiele lub nawet żadnej). Dany producent może być wydawcą wielu gier, dana recenzja dotyczy konkretnej gry (konkretnego wydania), napisana jest przez konkretnego recenzenta. Recenzent może napisać wiele recenzji do wielu gier.
+3. Określenie funkcji bazy danych i ich priorytetu
+Zasadniczym zadaniem przedmiotowej bazy danych jest katalogowanie gier planszowych i licznych informacji o tych grach. Głównymi funkcjami będzie: aktualizowanie bazy (np. dodawanie nowej gry, dodawanie kolejnej wersji, usuwanie informacji o grze), dodawanie producenta, recenzenta, dodawanie recenzji, selekcja gier i sortowanie według określonego parametru (np. gier danego producenta, o danej tematyce lub mechanice, przeznaczonej dla określonej grupy wiekowej, wszystkich wydań danej gry, wszystkich recenzji danego recenzenta), przeglądanie listy gier, recenzji itd. Najwyższy priorytet powinny przyjąć funkcje administratora, tj. aktualizujące bazę danych, niższy – dotyczące uzupełnienia informacji (np. dodawanie recenzji), natomiast najniższy priorytet – funkcje użytkowników dotyczące przeglądania bazy danych.
+Funkcja
+Priorytet 
+(W – wysoki, S – średni, N - niski)
+Tworzenie struktury – tabel, indeksów, widoków
+W
+Administracja bazą danych - bezpieczne 
+przechowywanie danych, zapewnienie 
+integralności i ochrona przed 
+nieautoryzowanym dostępem
+W
+Pobieranie i modyfikowanie danych 
+(SELECT, INSERT, UPDATE, DELETE)
+S
+Obsługa zapytań (pobieranie, filtrowanie 
+i agregowanie danych)
+N
+Generowanie raportów
+N
+
+4. Wybór technologii i rodzaju bazy danych do zrealizowania projektu
+Przedmiotowa baza danych opracowana będzie jako relacyjna baza danych w systemie Oracle Database.
+5. Wybór narzędzi do zrealizowania projektu
+Podstawowymi narzędziami służącymi do zrealizowania projektu będą: UMLet oraz Oracle SQL Developer Data Modeler – do modelowania bazy danych i tworzenia diagramów, Oracle SQL Developer -  jako środowisko do zbudowania bazy danych w języku SQL: stworzenia tabel, wypełnienia bazy danymi itd.
+6. Repozytorium projektu:
+https://github.com/BartR23/BD_boardgames
