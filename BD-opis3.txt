@@ -1,0 +1,10 @@
+Prezentacja użytkowników BD i ich ról
+Użytkownikami bazy danych, oprócz administratora, będą: zarządzający katalogiem gier, recenzenci oraz gracze/użytkownicy końcowi.
+Administrator bazy danych – definiuje schemat i kontroluje 3 poziomy bazy danych, tworzy nowe konta i hasła dla użytkowników, jest również odpowiedzialny za zapewnienie bezpieczeństwa bazy danych i zezwala tylko upoważnionym użytkownikom na dostęp do bazy danych/modyfikowanie jej, a także jest odpowiedzialny za problemy.
+Role:  DBA (użytkownik posiada wszystkie podstawowe uprawnienia niezbędne do administrowania bazą danych)
+Zarządcy katalogu – użytkownicy, którzy mogą tworzyć tabele i wypełniać je danymi, modyfikować i usuwać te dane.
+Role: CONNECT (umożliwia nawiązanie połączenia z bazą), RESOURCE (pozwala na tworzenie obiektów w bazie danych)
+Recenzenci – użytkownicy, którzy mogą przeglądać tabele bazy danych oraz dokonywać selekcji, a także wstawiać, modyfikować i usuwać rekordy, ale tylko w tabeli zawierającej recenzje.
+Role: CONNECT (umożliwia nawiązanie połączenia z bazą), PRZEGLADANIE (rola niestandardowa, umożliwia przeglądanie i selekcję danych wszystkich tabel), RECENZENT (rola niestandardowa, umożliwia wstawianie, modyfikowanie i usuwanie rekordów tabeli GP_RECENZJE)
+Gracze – użytkownicy końcowi, którzy mogą przeglądać katalog gier planszowych, ale nie mogą go w żaden sposób modyfikować.
+Role: CONNECT (umożliwia nawiązanie połączenia z bazą), PRZEGLADANIE (rola niestandardowa, umożliwia przeglądanie i selekcję danych wszystkich tabel)

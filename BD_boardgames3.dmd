@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BD_boardgames3" id="69F9B43A-5FCA-2B51-8E9D-340C704957A5" version="3.5">
+<createdBy>User</createdBy>
+<createdTime>2025-05-22 12:02:52 UTC</createdTime>
+<ownerDesignName>BD_boardgames3</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>69F9B43A-5FCA-2B51-8E9D-340C704957A5</designId>
+</OSDM_Design>
