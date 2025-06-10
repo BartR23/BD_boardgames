@@ -1,0 +1,23 @@
+Funkcje i procedury obsługujące BD
+Tworzenie funkcji w SQL pozwala na tworzenie własnych bloków kodu, które można wielokrotnie używać w różnych zapytaniach.
+Procedura, w odróżnieniu od funkcji, nie zwraca żadnej wartości, tylko wykonuje pewne zadania.
+
+Zarządzanie bazą danych (backup, restore)
+W SQL Developer można utworzyć kopię zapasową na kilka sposobów, np. można utworzyć kopię zapasową tabeli. 
+Można także wyeksportować dane dotyczące całej bazy do pliku. W tym celu należy wybrać z paska zadań opcję Tools >> Preferences, następnie rozwinąć Database >> Utilities >> Export, ustawić format na insert i zaakceptować.
+Następnie, wybierając Tools >> Database Export można rozpocząć migrację danych.
+Aby zaimportować dane do nowo utworzonego połączenia należy wybrać opcję Tools >> Preferences >> Import.
+
+Wariant testowy i na produkcji
+Aby utworzyć wariant testowy bazy danych utworzono nowego użytkownika – GP_TESTER.
+Następnie utworzono nowe połączenie (pustą bazę danych) dla tego użytkownika.
+Do skopiowania bazy danych wykorzystano narzędzie Database Copy (Tools >> Database Copy). Utworzona została kopia wyjściowej bazy danych.
+Do porównywania baz danych testowej i produkcyjnej (po wprowadzaniu zmian w trakcie procesu produkcji) wykorzystać można narzędzie Database Diff (Tools >> Database Diff). Możliwa jest selekcja konkretnych elementów (np. tabel) bazy danych w celu szybszego uzyskania wyniku porównania.
+Raport DatabaseDiff wyświetli różnice, które znalazł pomiędzy bazami danych. Można wyodrębnić elementy wspólne lub dodane w jednej z baz.
+
+Komunikacja z językiem programowania
+Do komunikacji z bazą danych wybrano język Python. Połączenie Pythona z bazą Oracle umożliwia biblioteka oracledb.
+
+Przykład zastosowania ORM
+ORM (Object-Relational Mapping) to technika, która umożliwia interakcję z bazą danych za pomocą obiektów, co zdecydowanie upraszcza złożone operacje związane z bezpośrednim korzystaniem z SQL. Jednym z głównych atutów ORM jest zwiększona produktywność. 
+Przykładowym frameworkiem umożliwiającym współpracę między Pythonem a bazą danych Oracle jest SQLAlchemy.
